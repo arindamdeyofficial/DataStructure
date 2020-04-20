@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ds
+namespace Sorts
 {
     //    MergeSort(arr[], l, r)
     //If r > l
@@ -82,14 +82,6 @@ namespace Ds
                 j++;
                 k++;
             }
-        }
-        public static void PrintArray(int[] arr)
-        {
-            int n = arr.Length;
-            for (int i = 0; i < n; ++i)
-                Console.Write(arr[i] + " ");
-
-            Console.WriteLine();
         }
     }
 }

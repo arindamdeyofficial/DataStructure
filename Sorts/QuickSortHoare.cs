@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ds
+namespace Sorts
 {
     //Hoare partition scheme
     //two indices that start at the ends of the array being partitioned, then move toward each other, 
@@ -80,14 +80,6 @@ namespace Ds
         {
             int n = arr.Length;
             Sort(arr, 0, n - 1);
-        }
-        public static void PrintArray(int[] arr)
-        {
-            int n = arr.Length;
-            for (int i = 0; i < n; ++i)
-                Console.Write(arr[i] + " ");
-
-            Console.WriteLine();
         }
     }
 }
