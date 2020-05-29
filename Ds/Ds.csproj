@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Binarysearch\Binarysearch.csproj" />
+    <ProjectReference Include="..\NumberToWordTests\NumberToWordTests.csproj" />
+    <ProjectReference Include="..\NumberToWord\NumberToWord.csproj" />
     <ProjectReference Include="..\Sorts\Sorts.csproj" />
     <ProjectReference Include="..\StackLibrary\StackLibrary.csproj" />
   </ItemGroup>
