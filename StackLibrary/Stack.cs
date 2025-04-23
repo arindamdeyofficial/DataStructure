@@ -2,67 +2,68 @@
 
 namespace StackLibrary
 {
-    public static class StackLogic
+    public class StackLogic
     {
-        static readonly int MAX = 1000;
-        static int top = -1;
-        static readonly int[] stack = new int[MAX];
+        private int[] stack;
+        private int top;
+        private int capacity;
 
-        static bool IsEmpty()
+        public StackLogic(int initialCapacity = 4)
         {
-            return (top < 0);
-        }
-        public static bool Push(int data)
-        {
-            if (top >= MAX)
-            {
-                Console.WriteLine("Stack Overflow");
-                return false;
-            }
-            else
-            {
-                stack[++top] = data;
-                return true;
-            }
+            capacity = initialCapacity;
+            stack = new int[capacity];
+            top = -1;
         }
 
-        public static int Pop()
+        public bool IsEmpty()
         {
-            if (top < 0)
-            {
-                Console.WriteLine("Stack Underflow");
-                return 0;
-            }
-            else
-            {
-                int value = stack[top--];
-                return value;
-            }
+            return top < 0;
         }
 
-        public static int Peek()
+        public bool Push(int data)
         {
-            if (top < 0)
+            if (top + 1 >= capacity)
             {
-                Console.WriteLine("Stack Underflow");
-                return 0;
+                Resize();
             }
-            else
-                return stack[top];
+
+            stack[++top] = data;
+            return true;
         }
 
-        public static int[] GetStack()
+        public int Pop()
         {
-            if (top < 0)
+            if (IsEmpty())
             {
-                Console.WriteLine("Stack Underflow");
-                return new int[0];
+                throw new InvalidOperationException("Stack Underflow");
             }
-            else
+
+            return stack[top--];
+        }
+
+        public int Peek()
+        {
+            if (IsEmpty())
             {
-                Console.WriteLine("Items in the Stack are :");
-                return stack;
+                throw new InvalidOperationException("Stack Underflow");
             }
+
+            return stack[top];
+        }
+
+        public int[] GetStack()
+        {
+            int[] result = new int[top + 1];
+            Array.Copy(stack, result, top + 1);
+            return result;
+        }
+
+        private void Resize()
+        {
+            capacity *= 2;
+            int[] newStack = new int[capacity];
+            Array.Copy(stack, newStack, top + 1);
+            stack = newStack;
         }
     }
 }
