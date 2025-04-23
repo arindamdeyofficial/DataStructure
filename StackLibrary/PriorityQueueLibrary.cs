@@ -4,6 +4,7 @@ namespace PriorityQueueLibrary
 {
     public class PriorityQueue<T>
     {
+        //min-priority queue
         private (T Item, int Priority)[] heap;
         private int size;
         private int capacity;

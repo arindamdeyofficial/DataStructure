@@ -1,0 +1,121 @@
+🔹 Basic Data Structures
+Arrays
+
+Strings
+
+Linked List (Singly, Doubly, Circular)
+
+Stacks (LIFO)
+
+Queues (FIFO)
+
+Circular Queue
+
+Priority Queue
+
+Deque (Double-ended Queue)
+
+🔹 Trees
+Binary Trees
+
+Binary Search Trees (BST)
+
+AVL Tree (Self-balancing BST)
+
+Red-Black Tree
+
+Segment Tree
+
+Fenwick Tree (Binary Indexed Tree)
+
+Trie (Prefix Tree)
+
+B-Tree / B+ Tree
+
+🔹 Heaps
+Min Heap
+
+Max Heap
+
+Heapify
+
+Priority Queues using Heaps
+
+🔹 Hashing
+Hash Tables
+
+Hash Maps
+
+Hash Sets
+
+Open Addressing, Chaining
+
+🔹 Graphs
+Representations (Adjacency Matrix/List)
+
+Depth-First Search (DFS)
+
+Breadth-First Search (BFS)
+
+Dijkstra's Algorithm
+
+Bellman-Ford
+
+Floyd-Warshall
+
+Prim’s and Kruskal’s (MST)
+
+Topological Sort
+
+Union-Find / Disjoint Set
+
+🔹 Advanced Data Structures
+Suffix Array
+
+Suffix Tree
+
+Bloom Filter
+
+Skip List
+
+K-D Tree
+
+Disjoint Set Union (DSU)
+
+LRU Cache (with LinkedHashMap / Doubly Linked List + HashMap)
+
+🔹 Sorting Algorithms (Related to Arrays)
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+Merge Sort
+
+Quick Sort
+
+Heap Sort
+
+Counting Sort
+
+Radix Sort
+
+Bucket Sort
+
+🔹 Other Concepts
+Recursion and Backtracking
+
+Greedy Algorithms
+
+Dynamic Programming (often uses DP tables/arrays)
+
+Sliding Window
+
+Two Pointers
+
+Divide and Conquer
+
+Bit Manipulation
+
+String Matching (KMP, Rabin-Karp)
