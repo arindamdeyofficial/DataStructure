@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>SkeletonSort</PackageId>
     <Authors>Arindam Dey</Authors>
     <Description>All types of sort library</Description>
     <PackageProjectUrl>https://github.com/arindamdeyofficial/DataStructure</PackageProjectUrl>
-    <PackageIcon>logoony.png</PackageIcon>
     <RepositoryUrl>https://github.com/arindamdeyofficial/DataStructure</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
     <PackageTags>sort,insertion sort, bubble sort,merge sort</PackageTags>
@@ -18,12 +17,5 @@
     <SignAssembly>false</SignAssembly>
     <Product>Hung</Product>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\Logo\logoony.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
 
 </Project>

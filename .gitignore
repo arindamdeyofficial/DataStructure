@@ -6,3 +6,5 @@
 */obj
 */bin
 *.suo
+/Ds/Ds/bin/Debug/net8.0
+/Ds/Ds/obj

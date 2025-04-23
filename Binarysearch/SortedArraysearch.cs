@@ -17,10 +17,14 @@ namespace Binarysearch
             if (element > arr[middleIndex]) return SearchRecursion(SubArray(arr, middleIndex + 1, arrSize), element);
             else return SearchRecursion(SubArray(arr, 0, middleIndex + 1), element);
         }
-        public int[] SubArray(int[] data, int index, int length)
+        public int[] SubArray(int[] data, int startIndex, int lastIndex)
         {
+            int length = lastIndex - startIndex;
             int[] result = new int[length];
-            Array.Copy(data, index, result, 0, length);
+            for(var i=0;i<length; i++)
+            {
+                result[i] = data[startIndex + i];
+            }
             return result;
         }
     }
