@@ -2,7 +2,7 @@
 
 namespace StackLibrary
 {
-    public class HeapLogic
+    public class MinHeap
     {
         //Heap (Priority Queue (Binary Heap), fast min/max retrieval)
         //A complete binary tree used to maintain priority order.\r\nTwo types: Max Heap(biggest on top) and Min Heap(smallest on top).\r\nSupports efficient insertion and removal of top priority item.
@@ -11,7 +11,7 @@ namespace StackLibrary
         private int size;
         private int capacity;
 
-        public HeapLogic(int initialCapacity = 4)
+        public MinHeap(int initialCapacity = 4)
         {
             capacity = initialCapacity;
             heap = new int[capacity];

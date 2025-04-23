@@ -55,14 +55,37 @@ namespace Ds.Controllers
         public string HeapOperate()
         {
             string msg = "";
-            var heap = new HeapLogic();
-            heap.Insert(40);
-            heap.Insert(10);
-            heap.Insert(20);
-            heap.Insert(5);
-            msg += "Min: " + heap.Peek() + Environment.NewLine; // 5
-            msg += "Extracted Min: " + heap.ExtractMin() + Environment.NewLine; // 5
-            msg += "Current Heap: " + string.Join(", ", heap.GetHeap()) + Environment.NewLine; // 10, 40, 20
+            var minheap = new MinHeap();
+            minheap.Insert(40);
+            minheap.Insert(10);
+            minheap.Insert(20);
+            minheap.Insert(5);
+            msg += Environment.NewLine + "MinHeap: " + Environment.NewLine;
+            msg += "Current Heap: " + string.Join(", ", minheap.GetHeap()) + Environment.NewLine;
+            msg += "Min: " + minheap.Peek() + Environment.NewLine; // 5
+            msg += "Extracted Min: " + minheap.ExtractMin() + Environment.NewLine; // 5
+            msg += "Current Heap: " + string.Join(", ", minheap.GetHeap()) + Environment.NewLine; // 10, 40, 20
+
+            var maxheap = new MaxHeap();
+            maxheap.Insert(10);
+            maxheap.Insert(50);
+            maxheap.Insert(30);
+            msg += Environment.NewLine + "MaxHeap: " + Environment.NewLine;
+            msg += "Created Heap: " + string.Join(", ", minheap.GetHeap()) + Environment.NewLine;
+            msg += "Min: " + maxheap.Peek() + Environment.NewLine; // 5
+            msg += "Extracted Min: " + maxheap.ExtractMax() + Environment.NewLine; // 5
+            msg += "Current Heap: " + string.Join(", ", maxheap.GetHeap()) + Environment.NewLine; // 10, 40, 20
+
+            var pq = new PriorityQueueLibrary.PriorityQueue<string>();
+            pq.Enqueue("Low Priority", 5);
+            pq.Enqueue("High Priority", 1);
+            pq.Enqueue("Medium Priority", 3);
+            msg += "PriorityQueue: " + Environment.NewLine;
+            msg += Environment.NewLine + "Created Heap: " + string.Join(", ", minheap.GetHeap()) + Environment.NewLine;
+            msg += pq.Dequeue() + Environment.NewLine; // Output: High Priority
+            msg += pq.Dequeue() + Environment.NewLine; // Output: Medium Priority
+            msg += pq.Dequeue() + Environment.NewLine; // Output: Low Priority
+
             return msg;
         }
     }
